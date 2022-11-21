@@ -10,7 +10,7 @@ export class Respostas{
 
     @ManyToOne(() => Usuario)
     @JoinColumn({name: "id"})
-    id_usuario:Usuario;
+    usuario:Usuario;
 
     @Column()
     id_pergunta:string;

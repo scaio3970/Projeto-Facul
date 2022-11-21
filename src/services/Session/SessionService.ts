@@ -1,6 +1,6 @@
 import { compare } from "bcryptjs";
 import { getRepository } from "typeorm";
-import { Usuario } from "../models/Usuario";
+import { Usuario } from "../../models/Usuario";
 import {sign} from 'jsonwebtoken';
 import { Subject } from "typeorm/persistence/Subject";
 

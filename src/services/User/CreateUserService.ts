@@ -1,5 +1,5 @@
 import { getRepository } from "typeorm";
-import { Usuario } from "../models/Usuario";
+import { Usuario } from "../../models/Usuario";
 import {hash} from 'bcryptjs';
 
 type registerRequest = {
