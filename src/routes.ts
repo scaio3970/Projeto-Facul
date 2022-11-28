@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { CreateUserController } from "./controllers/CreateUserController";
-import { DeleteUserController } from "./controllers/DeleteUserController";
-import { GetAllUsersController } from "./controllers/GetAllUsersController";
+import { CreateUserController } from "./controllers/User/CreateUserController";
+import { DeleteUserController } from "./controllers/User/DeleteUserController";
+import { GetAllUsersController } from "./controllers/User/GetAllUsersController";
 import { PermissionController } from "./controllers/PermissionController";
-import { SessionController } from "./controllers/SessionController";
-import { UpdateUserController } from "./controllers/UpdateUserController";
+import { SessionController } from "./controllers/Session/SessionController";
+import { UpdateUserController } from "./controllers/User/UpdateUserController";
 
 const routes = Router()
 
@@ -24,6 +24,10 @@ routes.delete("/DeletarUsuario/:id", new DeleteUserController().handle)
 
 //UPDATE
 routes.put("/usuario/:id", new UpdateUserController().handle)
+
+
+
+//Front-End
 
 routes.get("/logado", (req, res) => {
 

@@ -4,7 +4,7 @@ import { Usuario } from "../../models/Usuario";
 
 
 export class CreateResponseService {
-    async execute({usuario, id_pergunta,pontuacao}){
+    async execute({id_pergunta, usuario,pontuacao}){
         const repo = getRepository(Respostas);
 
         const userRepo = getRepository(Usuario);

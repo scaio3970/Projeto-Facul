@@ -24,9 +24,8 @@ export class SessionService{
         if(!matchPassword){
             return new Error("Usuario ou senha incorretos");
         }
-
-        const token = sign({},"480f4c47b6d71bf0715f3618644f6f36",{
-            subject:user.id,
+        delete user.senha
+        const token = sign({user},process.env.SECRET,{
             expiresIn: '1d'
         });     
 

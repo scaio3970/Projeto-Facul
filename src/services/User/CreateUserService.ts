@@ -16,7 +16,6 @@ export class CreateUserService{
 
         const user = repo.create({usuario,senha:senhaHash});
 
-
         //SELECT * FROM usuarios WHERE usuario = "usuario"
         if(await repo.findOne({usuario})){
             return new Error("Usuario já existe");   

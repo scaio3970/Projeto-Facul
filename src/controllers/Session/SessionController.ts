@@ -1,5 +1,5 @@
 import { Request,Response } from "express";
-import { SessionService } from "../services/Session/SessionService";
+import { SessionService } from "../../services/Session/SessionService";
 
 export class SessionController{
     async handle(request:Request, response:Response){
@@ -16,6 +16,7 @@ export class SessionController{
         }
 
         response.cookie("token", result.token,{maxAge: 60000* 60 * 24})
+        
         return response.json(result)
 
     }
